@@ -5,7 +5,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-html,
+/* html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
@@ -20,12 +20,12 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
+} */
 
-a {
+/* a {
   color: inherit;
   text-decoration: none;
-}
+} */
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -125,7 +125,7 @@ a {
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-1: oklch(27.122% 0.08143 267.252);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
@@ -140,11 +140,19 @@ a {
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@layer base {
+.navy {
+  border-color: rgb(14, 39, 61);
+}
+
+/* @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
   }
-}
+} */
+
+/* .p {
+  padding: 6px;
+} */
