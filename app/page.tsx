@@ -20,13 +20,13 @@ export default async function Home() {
             <h2 className="next-3xl font-bold tracking-tight md:text-4xl text-black">
               Welcome to Acvarello
             </h2>
-            <p className="text-neutral-600">
+            <p className="text-black">
               Discover the latest original abstract art
             </p>
             <Button
               asChild
               variant={"default"}
-              className="inline-flex items-center justify-center rounded-full px-6 py-3 bg-black text-white"
+              className="inline-flex items-center justify-center rounded-full px-6 py-3 text-white bg-black"
             >
               <Link
                 href="/art"

@@ -33,17 +33,17 @@ export const Carousel = ({ products }: Props) => {
             alt={currentProduct.name}
             width={400}
             height={300}
-            objectFit="contain"
+            objectFit="scale-down"
             className="transition-opacity duration-500 ease-in-out"
           />
         </div>
       )}
-      <CardContent className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50">
+      <CardContent className="absolute inset-0 flex flex-col items-center justify-center bg-opacity-50">
         <CardTitle className="text-3xl font-bold text-white mb-2">
           {currentProduct.name}
         </CardTitle>
         {price && price.unit_amount && (
-          <p className="text-xl text-black">
+          <p className="text-xl text-white">
            Price ${(price.unit_amount / 100)}
           </p>
         )}

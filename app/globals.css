@@ -3,14 +3,14 @@
 
 
 
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *)); */
 
-/* html,
+
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  background-color: rgb(226, 225, 220);
+  
 }
-
+/* 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -20,12 +20,12 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-} */
+} */ 
 
 /* a {
   color: inherit;
   text-decoration: none;
-} */
+}
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -141,7 +141,7 @@ body {
 }
 
 .navy {
-  border-color: rgb(14, 39, 61);
+  background-color: rgb(14, 39, 61);
 }
 
 /* @layer base {
