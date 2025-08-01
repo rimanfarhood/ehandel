@@ -29,7 +29,7 @@ export default async function Home() {
               className="inline-flex items-center justify-center rounded-full px-6 py-3 text-white bg-black"
             >
               <Link
-                href="/art"
+                href="/products"
                 className="inline-flex items-center justify-center rounded-full px-6 py-3"
               >
                 Browse All Products

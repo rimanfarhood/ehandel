@@ -14,7 +14,7 @@ export const Navbar = () => {
                 {/* Höger: navigation */}
                 <div className="hidden md:flex space-x-6">
                     <Link href="/">Home</Link>
-                    <Link href="/art">Art</Link>
+                    <Link href="/products">Art</Link>
                     <Link href="/contact">Contact</Link>
                     <Link href="/about">About us</Link>
                     <Link href="/checkout">Checkout</Link>
