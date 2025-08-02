@@ -51,6 +51,4 @@ export const ProductCard = ({ product }: Props) => {
   );
 };
 
-// group hover:shadow-2xl transition duration5-500 py-0 h-full flex flex-col border-gray-300
-// relative h-60 w-full
-// roup flex flex-col py-0 justify-center h-full w-full
+

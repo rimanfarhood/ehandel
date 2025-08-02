@@ -7,7 +7,7 @@ export default async function ArtPage() {
     });
     return (
         <div>
-            <h1>All Art</h1>
+            <h1 className="text-3xl font-semibold text-center mb-2">All Art</h1>
             <ProductList products={products.data}/>
         </div>
     )
