@@ -55,12 +55,11 @@ export const Navbar = () => {
           </Link>
         </div>
         <div className="flex items-center space-x-4">
-          <Link href="/checkout" className="">
+          <Link href="/checkout" className="relative">
             <ShoppingCartIcon className="h-6 w-6 " />
             {cartCount > 0 && (
               <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-xs text-white">
-                {" "}
-                {cartCount}{" "}
+                {cartCount}
               </span>
             )}
           </Link>
