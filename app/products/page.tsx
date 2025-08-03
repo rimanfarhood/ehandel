@@ -9,6 +9,7 @@ export default async function ArtPage() {
         <div>
             <h1 className="text-3xl font-semibold text-center mb-2">All Art</h1>
             <ProductList products={products.data}/>
+            
         </div>
     )
 }
