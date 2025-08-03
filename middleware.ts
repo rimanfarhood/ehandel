@@ -1,9 +1,11 @@
-// middleware.ts
+console.log("🔧 Middleware is running - Maintenance mode check")
+
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 export function middleware(req: NextRequest) {
-  const isMaintenance = process.env.MAINTENANCE_MODE === 'true'
+  const isMaintenance = process.env.NEXT_PUBLIC_MAINTENANCE_MODE === 'true'
+
   const isMaintenancePage = req.nextUrl.pathname.startsWith('/maintenance')
 
   if (isMaintenance && !isMaintenancePage && !req.nextUrl.pathname.startsWith('/api')) {
