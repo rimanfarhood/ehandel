@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 export function middleware(req: NextRequest) {
-  const isMaintenance = process.env.NEXT_PUBLIC_MAINTENANCE_MODE === 'true'
+  const isMaintenance = process.env.NEXT_PUBLIC_MAINTENANCE_MODE === 'true' 
 
   const isMaintenancePage = req.nextUrl.pathname.startsWith('/maintenance')
 
