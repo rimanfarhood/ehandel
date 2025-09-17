@@ -29,28 +29,28 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav className="sticky-top top-0 z-50 w-full top-0 z-50 bg-black text-white h-25">
+    <nav className="sticky-top top-0 z-50 w-full top-0 z-50 bg-black text-white">
       <div className="container mx-auto flex justify-between items-center px-6 py-4">
         <Link
           href="/"
-          className="text-3xl  hover:text-white-600 p-2  tracking-wider">
-          Acvarello
+          className="text-2xl hover:italic p-2 tracking-widest">
+          ACVARELLO
         </Link>
 
-        <div className="hidden md:flex space-x-6 lg:text-l">
-          <Link href="/" className="hover:text-pink-600">
+        <div className="hidden md:flex space-x-6 text-sm uppercase">
+          <Link href="/" className="hover:italic">
             Home
           </Link>
-          <Link href="/products" className="hover:text-pink-600">
+          <Link href="/products" className="hover:italic">
             Art
           </Link>
-          <Link href="/contact" className="hover:text-pink-600">
+          <Link href="/contact" className="hover:italic">
             Contact
           </Link>
-          <Link href="/about" className="hover:text-pink-600">
+          <Link href="/about" className="hover:italic">
             About us
           </Link>
-          <Link href="/checkout" className="hover:text-pink-600">
+          <Link href="/checkout" className="hover:italic">
             Checkout
           </Link>
         </div>
@@ -77,32 +77,32 @@ export const Navbar = () => {
         </div>
         </div>
           {mobileOpen && (
-            <nav className="md:hidden bg-black shadow-md">
+            <nav className="md:hidden bg-black shadow-md tracking-wider">
               {""}
               <ul className="flex flex-col p-4 space-y-2">
                 {""}
                 <li>
-                  <Link className="block hover:text-pink-600" href={"/"}>
+                  <Link className="block hover:italic" href={"/"}>
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link className="block hover:text-pink-600" href={"/products"}>
+                  <Link className="block hover:italic" href={"/products"}>
                     Art
                   </Link>
                 </li>
                 <li>
-                  <Link className="block hover:text-pink-600" href={"/contact"}>
+                  <Link className="block hover:italic" href={"/contact"}>
                     Contact
                   </Link>
                 </li>
                 <li>
-                  <Link className="block hover:text-pink-600" href={"/about"}>
+                  <Link className="block hover:italic" href={"/about"}>
                     About us
                   </Link>
                 </li>
                 <li>
-                  <Link className="block hover:text-pink-600" href={"/checkout"}>
+                  <Link className="block hover:italic" href={"/checkout"}>
                     Checkout
                   </Link>
                 </li>

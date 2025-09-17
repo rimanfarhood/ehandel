@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -8,8 +9,16 @@
 
 body {
   background-color: rgb(226, 225, 220);
+  font-family: 'Tinos, serif';
+  letter-spacing: 2px;
   
 }
+
+
+nav > div > Link:hover {
+  font-style: italic;
+}
+
 /* 
 body {
   -webkit-font-smoothing: antialiased;
