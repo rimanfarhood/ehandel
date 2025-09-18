@@ -19,18 +19,22 @@ export const ProductList = ({ products }: Props) => {
       : false;
     return nameMatch || descriptionMatch;
   });
+
   return (
-    <div>
-      <div className="mb-6 flex justify-center">
+    <div className="max-w-7xl mx-auto px-6 py-16">
+      {/* Search */}
+      <div className="mb-16 flex justify-center">
         <input
           type="text"
-          placeholder="Search for art"
+          placeholder="Search for art..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full max-w-md rounded border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-2"
+          className="w-full max-w-xl rounded-xl border border-gray-300 px-6 py-3 text-gray-700 placeholder-gray-400 shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400 transition"
         />
       </div>
-      <ul className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+      {/* Art Grid */}
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
         {filteredProduct.map((product, key) => (
           <li key={key}>
             <ProductCard product={product} />
@@ -40,3 +44,47 @@ export const ProductList = ({ products }: Props) => {
     </div>
   );
 };
+
+
+// "use client";
+
+// import Stripe from "stripe";
+// import { ProductCard } from "./product-card";
+// import { useState } from "react";
+
+// interface Props {
+//   products: Stripe.Product[];
+// }
+
+// export const ProductList = ({ products }: Props) => {
+//   const [searchTerm, setSearchTerm] = useState<string>("");
+
+//   const filteredProduct = products.filter((product) => {
+//     const term = searchTerm.toLowerCase();
+//     const nameMatch = product.name.toLowerCase().includes(term);
+//     const descriptionMatch = product.description
+//       ? product.description.toLowerCase().includes(term)
+//       : false;
+//     return nameMatch || descriptionMatch;
+//   });
+//   return (
+//     <div>
+//       <div className="mb-6 flex justify-center">
+//         <input
+//           type="text"
+//           placeholder="Search for art"
+//           value={searchTerm}
+//           onChange={(e) => setSearchTerm(e.target.value)}
+//           className="w-full max-w-md rounded border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-2"
+//         />
+//       </div>
+//       <ul className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+//         {filteredProduct.map((product, key) => (
+//           <li key={key}>
+//             <ProductCard product={product} />
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };

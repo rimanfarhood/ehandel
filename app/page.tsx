@@ -1,16 +1,21 @@
+"use client";
+import { useState } from "react";
+import "@/app/globals.css";
 import Image from "next/image";
 import styles from "./page.module.css";
-import { stripe } from "@/lib/stripe";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Carousel } from "@/components/ui/carousel";
-import "@/app/globals.css";
 
-export default async function Home() {
-  const products = await stripe.products.list({
-    expand: ["data.default_price"],
-    limit: 5,
-  });
+export default function Home() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const images = [
+    { src: "/images/clown.png", alt: "Clown painting" },
+    { src: "/images/lila.jpg", alt: "Lila painting" },
+    { src: "/images/splash.png", alt: "Splash painting" },
+    { src: "/images/öga.png", alt: "Öga painting" },
+  ];
 
   return (
     <main className="flex flex-col">
@@ -47,9 +52,9 @@ export default async function Home() {
           <h2 className="text-3xl ">Novalié Novéira</h2>
           <p>
             Hej, kul att du hittat hit! Jag är Novalié och att måla är bland det
-            härligaste jag vet. När jag målar har sällan en idé om resultatet i
-            förväg, utan låter känslan av färg, drag och pigment styra hela
-            processen.{" "}
+            härligaste jag vet. När jag målar har jag sällan en idé om
+            resultatet i förväg, utan låter känslan av färg, drag och pigment
+            styra hela processen. Välkommen till min konstvärld!{" "}
             <Link href="/about" className="italic underline hover:not-italic">
               Läs mer
             </Link>
@@ -58,44 +63,67 @@ export default async function Home() {
 
         {/* Right: Mini Gallery */}
         <div className="md:w-1/2 grid grid-cols-2 gap-4">
-          <div className="rounded-xl overflow-hidden shadow-md">
-            <img
-              src=""
-              alt="Painting"
-              className="w-full h-40 object-cover transition-transform duration-300 hover:scale-105"
-            />
+          {images.map((img, i) => (
+            <div
+              key={i}
+              className="overflow-hidden shadow-md cursor-pointer"
+              onClick={() => setSelectedImage(img.src)}
+            >
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full border border-black h-40 object-cover transition-transform duration-300 govwe:scale-105"
+              />
+            </div>
+          ))}
+          {/* Modal */}
+          {selectedImage && (
+            <div
+              className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50"
+              onClick={() => setSelectedImage(null)}
+            >
+              <img
+                src={selectedImage}
+                alt="Full Size"
+                className="max-w-full max-h-full"
+              />
+            </div>
+          )}
+        </div>
+      </section>
+
+      <section className="py-16 px-6 bg-black text-gray-200 w-full rounded mb-6">
+        <h2 className="text-2xl mb-6 font-bold">Aktuellt</h2>
+
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-lg font-semibold">Första Kollectionen</h3>
+            <p>Titta förbi 1 november för att kika på första släppet.</p>
+            <Link href="/shop" className="underline hover:text-gray-400">
+              Till shoppen →
+            </Link>
           </div>
-          <div className="rounded-xl overflow-hidden shadow-md">
-            <img src="/image" alt="" />
-          </div>
-          <div className="rounded-xl overflow-hidden shadow-md">
-            <img
-              src=""
-              alt="Painting"
-              className="w-full h-40 object-cover transition-transform duration-300 hover:scale-105"
-            />
-          </div>
-          <div className="rounded-xl overflow-hidden shadow-md">
-            <img
-              src=""
-              alt="Painting"
-              className="w-full h-40 object-cover transition-transform duration-300 hover:scale-105"
-            />
+
+          <div>
+            <h3 className="text-lg font-semibold">Kommande utställningar</h3>
+            <ul className="space-y-2">
+              <li>
+                <span className="font-medium">Planket Kristianstad</span> – 20
+                sep 2025
+                <Link
+                  href="https://www.kristianstad.se/byggaboochmiljo/samhallsutveckling/nasbyenplatsistandigutveckling/stadsutvecklingnasby/planket.53951.html"
+                  target="_blank"
+                  className="underline hover:text-gray-400 ml-2"
+                >
+                  Läs mer
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* Contact Info */}
-      <section className="py-16 px-6 bg-gray-100 w-full text-center">
-        <h2 className="text-2xl font-semibold mb-6">Contact</h2>
-        <p>(infoga kontaktinfo här, t.ex. email, sociala medier)</p>
-        <p>(infoga eventuell adress eller annat info)</p>
-      </section>
-
       {/* Footer */}
-      <footer className="py-10 text-center text-sm text-gray-500">
-        <p>(infoga ev. copyright / note här)</p>
-      </footer>
     </main>
   );
 }
