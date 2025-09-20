@@ -3,7 +3,7 @@ import { ShopReminderForm } from "@/components/signup";
 export default function ShopComingSoon() {
   return (
     <div className="max-w-3xl mx-auto text-center py-24 px-6">
-      <h1 className="text-4xl font-bold mb-6">Vi 1 November öppar</h1>
+      <h1 className="text-4xl font-bold mb-6">Hej kul att du hittade hit! Vi öppnar 1 November</h1>
       <p className="text-lg text-gray-600 mb-10">
         Vill du få en påminnelse, sign up!
       </p>
