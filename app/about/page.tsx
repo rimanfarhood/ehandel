@@ -7,7 +7,7 @@ export default function About() {
 
       {/* Header Section */}
       <section className="text-center space-y-4">
-        <h1 className="text-4xl font-bold">Om Novalié Novéira</h1>
+        <h1 className="text-4xl ">Om Nivellé Novéira</h1>
         <p className="text-gray-600 max-w-xl mx-auto">
           Här kan du berätta kort om vem du är, din konstnärliga vision, eller varför du målar.
         </p>
@@ -17,7 +17,7 @@ export default function About() {
       <section className="flex flex-col md:flex-row items-center gap-8">
         {/* Text */}
         <div className="md:w-1/2 space-y-4">
-          <h2 className="text-2xl font-semibold">Min bakgrund</h2>
+          <h2 className="text-2xl">Min bakgrund</h2>
           <p>
             (Infoga här: Berätta om din uppväxt, barndomsminnen eller något som formade dig som konstnär.)
           </p>
@@ -41,9 +41,9 @@ export default function About() {
       <section className="flex flex-col md:flex-row-reverse items-center gap-8">
         {/* Text */}
         <div className="md:w-1/2 space-y-4">
-          <h2 className="text-2xl font-semibold">Min konstresa</h2>
+          <h2 className="text-2xl">Min konstresa</h2>
           <p>
-            (Infoga här: Berätta om din konstutbildning, projekt du arbetat med, tekniker du älskar, hur du skapar dina verk.)
+            (Infoga här: Berätta om din , projekt du arbetat med, tekniker du älskar, hur du skapar dina verk.)
           </p>
           <p>
             (Exempel: Varför du målar för känsla snarare än resultat, hur färg, drag och pigment styr dig.)
@@ -63,7 +63,7 @@ export default function About() {
 
       {/* Philosophy / Values */}
       <section className="space-y-4 text-center">
-        <h2 className="text-2xl font-semibold">Min konstfilosofi</h2>
+        <h2 className="text-2xl">Min konstfilosofi</h2>
         <p>
           (Infoga här: Berätta kort om vad din konst står för, dina värderingar, varför du målar på ditt sätt.)
         </p>
@@ -74,7 +74,7 @@ export default function About() {
 
       {/* Optional Gallery / Highlight */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-center">Några favoriter</h2>
+        <h2 className="text-2xl text-center">Några favoriter</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <Image src="/images/clown.png" alt="Clown" width={300} height={300} className="object-cover rounded shadow-md" />
           <Image src="/images/lila.jpg" alt="Lila" width={300} height={300} className="object-cover rounded shadow-md" />
@@ -85,7 +85,7 @@ export default function About() {
 
       {/* Contact / Call to Action */}
       <section className="text-center space-y-4">
-        <h2 className="text-2xl font-semibold">Vill du veta mer?</h2>
+        <h2 className="text-2xl">Vill du veta mer?</h2>
         <p>Kontakta mig gärna om du vill veta mer om mina verk eller planerade utställningar.</p>
         <Link href="/contact" className="px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition">
           Kontakta mig

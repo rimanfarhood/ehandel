@@ -14,7 +14,6 @@ export const Footer = () => {
         <p><Link href="https://www.instagram.com/acvarello.se/" className="hover:underline italic" target="_blank">
         Instagram
         </Link>
-        <Footer
         </p>
       </div>
     </footer>

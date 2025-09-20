@@ -23,7 +23,7 @@ export const ProductList = ({ products }: Props) => {
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
       {/* Search */}
-      <div className="mb-16 flex justify-center">
+      <div className="mb-16 flex justify-center border border-black">
         <input
           type="text"
           placeholder="Search for art..."

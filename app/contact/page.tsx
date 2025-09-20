@@ -5,7 +5,7 @@ export default function Contact() {
     <main className="flex flex-col items-center px-6 py-16 max-w-4xl mx-auto space-y-16">
       {/* Header */}
       <section className="text-center space-y-4">
-        <h1 className="text-4xl d">Kontakta Novalié</h1>
+        <h1 className="text-4xl d">Kontakta Nivellé</h1>
         <p className="text-gray-600 max-w-xl mx-auto">
           Vill du veta mer om mina verk, planerade utställningar eller köpa en
           tavla? Hör gärna av dig!

@@ -39,19 +39,16 @@ export const Navbar = () => {
 
         <div className="hidden md:flex space-x-6 text-sm uppercase">
           <Link href="/" className="hover:italic">
-            Home
+            Hem
           </Link>
           <Link href="/products" className="hover:italic">
-            Art
+            konst
           </Link>
           <Link href="/contact" className="hover:italic">
-            Contact
+            Kontakt
           </Link>
           <Link href="/about" className="hover:italic">
-            About us
-          </Link>
-          <Link href="/checkout" className="hover:italic">
-            Checkout
+            om oss
           </Link>
         </div>
         <div className="flex items-center space-x-4">

@@ -14,27 +14,61 @@ export const ProductCard = ({ product }: Props) => {
   const imageUrl = product.images[0] || "/images/default-art.png";
 
   return (
-    <div className="relative group cursor-pointer overflow-hidden rounded-3xl">
-      {/* Bild */}
-      <div className="relative w-full h-96 sm:h-80 md:h-96">
-        <Image
-          src={imageUrl}
-          alt={product.name}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-      </div>
+    <Link href={`/products/${product.id}`} className="block h-full">
+      <div className="relative group cursor-pointer overflow-hidden border border-black">
+        {/* Bild */}
+        <div className="relative w-full h-96 sm:h-80 md:h-96">
+          <Image
+            src={imageUrl}
+            alt={product.name}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
-        <h3 className="text-white text-xl font-semibold">{product.name}</h3>
-        {product.description && (
-          <p className="text-gray-200 mt-1 text-sm">{product.description}</p>
-        )}
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+          <h3 className="text-white text-xl font-semibold">{product.name}</h3>
+          {product.description && (
+            <p className="text-gray-200 mt-1 text-sm">{product.description}</p>
+          )}
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
+
+
+
+// interface Props {
+//   product: Stripe.Product;
+// }
+
+// export const ProductCard = ({ product }: Props) => {
+//   const imageUrl = product.images[0] || "`/products/${product.id}" ;
+
+//   return (
+//     <div className="relative group cursor-pointer overflow-hidden border border-black">
+//       {/* Bild */}
+//       <div className="relative w-full h-96 sm:h-80 md:h-96">
+//         <Image
+//           src={product.images[0]}
+//           alt={product.name}
+//           fill
+//           className="object-cover transition-transform duration-500 group-hover:scale-105"
+//         />
+//       </div>
+
+//       {/* Overlay */}
+//       <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+//         <h3 className="text-white text-xl font-semibold">{product.name}</h3>
+//         {product.description && (
+//           <p className="text-gray-200 mt-1 text-sm">{product.description}</p>
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
 
 // interface Props {
 //   product: Stripe.Product;
@@ -58,7 +92,7 @@ export const ProductCard = ({ product }: Props) => {
 //             />
 //           </div>
 //         )}
-      
+
 //           <CardHeader className="p-4">
 //             <CardTitle className="text-3xl font-bold text-gray-800">
 //               {product.name}
@@ -81,5 +115,3 @@ export const ProductCard = ({ product }: Props) => {
 //     </Link>
 //   );
 // };
-
-

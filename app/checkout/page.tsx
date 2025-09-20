@@ -29,7 +29,7 @@ export default function CheckoutPage() {
         <CardContent>
           <ul className="space-y-4">
             {items.map((item, key) => (
-              <li key={key} className="flex flex-col gap-3 border-b pb-2">
+              <li key={key} className="flex flex-col gap-3 pb-2">
                 <div className="flex justify-between">
                   <span className="text-xl font-medium">{item.name} </span>
                   <span className="text-xl font-semibold">

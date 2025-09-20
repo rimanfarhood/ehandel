@@ -49,9 +49,9 @@ export default function Home() {
       >
         {/* Left: About / Values */}
         <div className="md:w-1/2 space-y-4">
-          <h2 className="text-3xl ">Novalié Novéira</h2>
+          <h2 className="text-3xl ">Nivellé Novéira</h2>
           <p>
-            Hej, kul att du hittat hit! Jag är Novalié och att måla är bland det
+            Hej, kul att du hittat hit! Jag är Nivellé och att måla är bland det
             härligaste jag vet. När jag målar har jag sällan en idé om
             resultatet i förväg, utan låter känslan av färg, drag och pigment
             styra hela processen. Välkommen till min konstvärld!{" "}
