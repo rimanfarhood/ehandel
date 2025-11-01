@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="bg-black text-gray-200 py-10 w-full">
+    <footer className="bg-black text-gray-200 py-10 w-full mb-0">
       <div className="max-w-6xl mx-auto text-center text-sm space-y-2">
         <p>© {new Date().getFullYear()} Acvarello. All rights reserved.</p>
         <p>

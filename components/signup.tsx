@@ -1,6 +1,7 @@
 // components/ShopReminderForm.tsx
 "use client";
 
+
 export const ShopReminderForm = () => {
   return (
     <form
@@ -29,13 +30,13 @@ export const ShopReminderForm = () => {
       <label className="flex items-start space-x-2 text-left">
         <input type="checkbox" required className="mt-1" />
         <span className="text-sm text-gray-600">
-          Jag godkänner att min e-postadress sparas för att ta emot information om när webbshopen öppnar. Läs mer i vår{" "}
+          Jag godkänner att min e-postadress sparas för att ta emot information
+          om när webbshopen öppnar. Läs mer i vår{" "}
           <a href="/privacy" className="underline">
-            integritetspolicyn
-          </a>.
+            Integritetspolicy
+          </a>
         </span>
       </label>
     </form>
   );
 };
-
